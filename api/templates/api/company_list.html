@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Empresas</title>
+</head>
+<body>
+    <h1>Empresas</h1>
+    <ul>
+        {% for company in companies %}
+            <li>{{ company.name }} - {{ company.email }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'company-create' %}">Crear nueva empresa</a>
+</body>
+</html>
